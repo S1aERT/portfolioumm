@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Template</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar .logo {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+        }
+
+        /* Sidebar link animation */
+        @keyframes colorChange {
+            0% { color: #ff6347; }     /* Tomato */
+            25% { color: #ff7f50; }    /* Coral */
+            50% { color: #1e90ff; }    /* DodgerBlue */
+            75% { color: #32cd32; }    /* LimeGreen */
+            100% { color: #ff6347; }   /* Tomato (Loop) */
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            animation: colorChange 5s infinite; /* 5-second loop */
+        }
+
+        /* Main content styling */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+
+        /* Section styling */
+        .section {
+            background-color: #fff;
+            padding: 50px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .activity-list, .project-list, .info-list, .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .activity-list li, .project-list li, .info-list li, .skill-list li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p, .info-list li a {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        /* Button styling */
+        .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        /* Image styling */
+        .intro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">CB</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#co-curricular">Co-Curricular</a></li>
+                <li><a href="#extracurricular">Extracurricular</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#additional-info">Additional Info</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="intro">
+                <img src="C:\Users\sarth\Downloads\SARTHAK SAHU.png" alt="Profile Picture">
+                <h1>SARTHAK SAHU</h1>
+                <p>I am a skilled full-stack developer with a passion for creating innovative web applications. Explore my work and get in touch if you would like to collaborate.</p>
+                <div class="buttons">
+                    <a href="C:\Users\sarth\Downloads\SARTHAK SAHU.pdf" class="btn" target="_blank">Resume</a>
+                    <a href="#contact" class="btn">Contact</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I’m Sarthak Sahu. I am from Odisha but was born and raised in Delhi-NCR. I am an aspiring web developer skilled in HTML, JavaScript, Java, and C++ paradigms, with strong knowledge in back-end development. My passion for full-stack development drives me to create innovative and efficient web applications that solve real-world problems. With a focus on clean code and a collaborative mindset, I’m eager to contribute to projects that challenge me to grow further.</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>B.Tech (3rd Year), Symbiosis Institute Of Technology, Pune</h3>
+                <p>Aug 2022 - Aug 2026</p>
+            </div>
+            <div class="education-item">
+                <h3>Intermediate, City International School, Pune</h3>
+                <p>Percentage: 88.2%</p>
+            </div>
+            <div class="education-item">
+                <h3>Matriculation, Delhi Public School Rajnagar, Ghaziabad</h3>
+                <p>Percentage: 95.6%</p>
+            </div>
+        </section>
+
+        <!-- Co-curricular Activities Section -->
+        <section id="co-curricular" class="section">
+            <h2>Co-curricular Activities</h2>
+            <ul class="activity-list">
+                <li>Hackathon Participant - Developed a weather app in a 24-hour hackathon, securing 3rd place.</li>
+                <li>Completed Certification in Web Development - Earned certification on Udemy, specializing in MERN stack.</li>
+                <li>Workshop on AI & ML - Attended an advanced workshop on AI and Machine Learning at XYZ Institute.</li>
+            </ul>
+        </section>
+
+        <!-- Extra-curricular Activities Section -->
+        <section id="extracurricular" class="section">
+            <h2>Extra-curricular Activities</h2>
+            <ul class="activity-list">
+                <li>Volunteer - Organized and managed cultural events for college festivals, improving team coordination and leadership skills.</li>
+                <li>Sports Captain - Led the school basketball team in interschool competitions, winning several district-level championships.</li>
+                <li>Public Speaking - Member of the college debate club, actively participating in and winning inter-college debate competitions.</li>
+                <li>Music Enthusiast - Passionate about playing the guitar, performed at local music events and college open mic sessions.</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li>Library Management System (Using C++)</li>
+                <li>Library Management System (Using Java as frontend and Oracle as backend)</li>
+                <li>Library Management System (Using Python)</li>
+                <li>Library Management System (Using C)</li>
+                <li>Matlab project: Automatically segment and label object in a video</li>
+                <li>Smart Zombie Shooter Game (Using Unity, C#, and VS Community)</li>
+            </ul>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages" class="section">
+            <h2>Languages</h2>
+            <div class="language-item">
+                <h3>English</h3>
+                <p>First Language</p>
+            </div>
+            <div class="language-item">
+                <h3>Hindi</h3>
+                <p>Fluent in spoken Hindi</p>
+            </div>
+            <div class="language-item">
+                <h3>Odia</h3>
+                <p>Mother Tongue</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul class="skill-list">
+                <li><strong>MySQL:</strong> Intermediate</li>
+                <li><strong>C++:</strong> Proficient</li>
+                <li><strong>Java:</strong> Proficient</li>
+                <li><strong>HTML:</strong> Intermediate</li>
+                <li><strong>JavaScript:</strong> Intermediate</li>
+                <li><strong>MATLAB:</strong> Beginner</li>
+            </ul>
+        </section>
+
+        <!-- Additional Info Section -->
+        <section id="additional-info" class="section">
+            <h2>Additional Information</h2>
+            <ul class="info-list">
+                <li><strong>Phone No:</strong> +91 8920686320</li>
+                <li><strong>Email:</strong> <a href="mailto:sarthaksahu776@gmail.com">sarthaksahu776@gmail.com</a></li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <h2>Contact</h2>
+            <p>If you would like to get in touch, feel free to reach out through any of the contact information provided above.</p>
+        </section>
+    </div>
+</body>
+</html>
